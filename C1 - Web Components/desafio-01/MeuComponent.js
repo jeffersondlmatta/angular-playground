@@ -20,6 +20,27 @@ class MeuComponent extends HTMLElement {
     shadow.appendChild(componentRoot);
     shadow.appendChild(style);
   }
+  build(){
+    const componentRoot = document.createElement('div'); //Cria um elemento no HTML
+    componentRoot.setAttribute("class","card"); // seta um atributo - colocar uma classe com nome por exemplo 
+    
+    const cardEsquerda= document.createElement('div');
+    const cardDireita= document.createElement('div');
+
+    const nome = document.createElement('p')
+  
+    
+    cardEsquerda.appendChild(nome);
+    componentRoot.appendChild(cardEsquerda)
+    componentRoot.appendChild(cardDireita)
+
+    return componentRoot
+  
+  
+  }
 }
 
 customElements.define("meu-componente", MeuComponent);
+
+
+
